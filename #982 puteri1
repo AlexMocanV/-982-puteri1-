@@ -1,0 +1,34 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+bool ok;
+int main()
+{
+    int n,y,i,z=0,k,nrnou,rest,copiey,r=0;
+    cin>>n>>k;
+   for(i=1;i<=n;i++)
+   {
+       cin>>y;
+       copiey=y;
+       r=0;
+       ok=0;
+       while(y>0)
+       {
+           rest=y%k;
+           if(rest!=0&&rest!=1)
+           {
+               ok=1;
+               break;
+           }
+          
+           y=y/k;
+       }
+       if(ok==0)
+       {
+           z++;
+       }
+   }
+    cout<<z;
+
+    return 0;
+}
